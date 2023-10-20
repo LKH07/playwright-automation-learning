@@ -1,0 +1,1 @@
+export const CAPTURE_AFFORDABILITY_CONSENT = '/checkout/demo/captureAffordabilityConsent';
