@@ -1,0 +1,17 @@
+{
+  "name": "soip",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.7",
+    "dotenv": "^16.3.1"
+  },
+  "scripts": {
+    "test:all": "npx playwright test",
+    "test:ch": "npx playwright test --project=chromium",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:firefox": "npx playwright test --project=firefox"
+  }
+}
