@@ -1,0 +1,11 @@
+{
+  "extends": ["@sky-uk/eslint-config-sky-typescript"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ]
+  }
+}
