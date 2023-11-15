@@ -1,4 +1,4 @@
-import { Page, Locator, expect } from "@playwright/test";
+import { Page, Locator, expect } from '@playwright/test';
 
 export class ConfigurePage {
   readonly smallGlass: Locator;
@@ -14,10 +14,10 @@ export class ConfigurePage {
   readonly frameColorPink: Locator;
 
   constructor(page: Page) {
-    this.smallGlass = page.getByTestId("configure-size-selection-43");
-    this.mediumGlass = page.getByTestId("configure-size-selection-55");
-    this.largeGlass = page.getByTestId("configure-size-selection-65");
-    this.basketOpen = page.getByTestId("basket-trigger-button");
+    this.smallGlass = page.getByTestId('configure-size-selection-43');
+    this.mediumGlass = page.getByTestId('configure-size-selection-55');
+    this.largeGlass = page.getByTestId('configure-size-selection-65');
+    this.basketOpen = page.getByTestId('basket-trigger-button');
     this.basketClose = page.locator('[data-tracking-label="basket-close"]');
 
     this.frameColorBlack = page
@@ -47,12 +47,12 @@ export class ConfigurePage {
 
   async selectLlamaGlass() {
     this.frameColorBlack.click();
-    await expect(this.frameColorBlack).toHaveAttribute("aria-checked", "true");
+    await expect(this.frameColorBlack).toHaveAttribute('aria-checked', 'true');
     this.frameColorBlue.click();
-    await expect(this.frameColorBlue).toHaveAttribute("aria-checked", "true");
+    await expect(this.frameColorBlue).toHaveAttribute('aria-checked', 'true');
     this.frameColorGreen.click();
-    await expect(this.frameColorGreen).toHaveAttribute("aria-checked", "true");
+    await expect(this.frameColorGreen).toHaveAttribute('aria-checked', 'true');
     this.frameColorPink.click();
-    await expect(this.frameColorPink).toHaveAttribute("aria-checked", "true");
+    await expect(this.frameColorPink).toHaveAttribute('aria-checked', 'true');
   }
 }
