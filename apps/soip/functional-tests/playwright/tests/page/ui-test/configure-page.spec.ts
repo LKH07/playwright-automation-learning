@@ -10,6 +10,12 @@ test.describe('Glass configure', () => {
 
     await configure.selectSkyGlass();
     await configure.basketOpenAndClose();
-    await configure.selectLlamaGlass();
+    // await configure.selectframeColor();
+
+    await configure.contractLength24m.click();
+    await configure.contractLength48m.click();
+    await configure.contractLengthUFP.click();
+    await configure.continueButton.click();
+    await expect(page).toHaveURL(/glass\/buy\/sky-live/);
   });
 });
